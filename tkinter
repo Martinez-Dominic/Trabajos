@@ -5,7 +5,7 @@ def saludar():
  nombre = entrada.get()
  edad = entrada_edad.get()
  etiqueta_resultado.config(text=f"Hola {nombre} tienes {edad} años")
-
+(ventana.config(bg="dark green"))
 
 ventana = tk.Tk()
 ventana.title("Mi primera app grafica")
@@ -19,11 +19,22 @@ etiqueta.pack()
 entrada = tk.Entry(ventana)
 entrada.pack()
 
+etiqueta = tk.Label(ventana, text="Ingresa tu edad:")
+etiqueta.pack()
+
+
+entrada_edad = tk.Entry(ventana)
+entrada_edad.pack()
+
 
 boton = tk.Button(ventana, text="Mostrar saludo", command=saludar)
 boton.pack()
 
 etiqueta_resultado = tk.Label(ventana, text="")
 etiqueta_resultado.pack()
+
+etiqueta_autoria= tk.label(ventana,text="Dominic Misraim Martinez Benitez")
+etiqueta_autoria.pack()
+
 
 ventana.mainloop()
