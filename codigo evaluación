@@ -1,0 +1,18 @@
+import tkinter as tk
+def ventana2 ():
+ ventana=tk.Tk()
+ ventana.title("Nombre")
+
+ ventana.geometry("500x500")
+ etiqueta=tk.Label(ventana, text= f"te llamas:{Nombre}").pack()
+ ventana.mainloop()
+ 
+ventana=tk.Tk()
+ventana.title("Nombre")
+
+ventana.geometry("500x300")
+etiqueta=tk.Label(ventana, text= "Escribe tu nombre").pack()
+entrada=tk.Entry(ventana).pack()
+boton=tk.Button(ventana,text="Suba", command=ventana2).pack()
+Nombre=entrada
+ventana.mainloop()
